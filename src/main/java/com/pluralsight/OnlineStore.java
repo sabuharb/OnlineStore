@@ -29,7 +29,7 @@ switch (choice) {
         displayProducts(scanner, inventory);
         break;
     case 2:
-        displayCart("Cart");
+        displayCart();
             break;
     case 3:
        System.out.println("Exit");
@@ -48,7 +48,26 @@ switch (choice) {
 
     }
 
-    private static void displayCart(String cart) {
+    private static void displayCart(Scanner scanner) {
+        System.out.println("Cart");
+        System.out.println("1 - Check Out");
+        System.out.println("2 - Remove Product");
+        System.out.println("3 - Go Back");
+        System.out.print("Select an option: ");
+        int option = scanner.nextInt();
+
+        switch(option){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                return;
+        }
+
+
+
+
     }
 
     private static void displayProducts(Scanner scanner, HashMap<String, Product> inventory) {
